@@ -12,11 +12,11 @@ $ heroku plugins:install https://github.com/pvh/heroku-lunch.git
 
 ```bash
 $ heroku lunch -s
-Monday       Some lunch for the day
-Tuesday      Another lunch
-Wednesday    By now we're pretty fat
-Thursday     Something bio dynamic
-Friday       ZOMG, crepes
+  Monday       Some lunch for the day
+* Tuesday      Another lunch
+  Wednesday    By now we're pretty fat
+  Thursday     Something bio dynamic
+  Friday       ZOMG, crepes
 ```
 
 ```bash
