@@ -4,18 +4,10 @@ class Heroku::Command::Lunch < Heroku::Command::Base
 
   include Heroku::Helpers
 
-  # output today's lunch
+  # output this weeks's lunches
   #
   def index
-    puts get_meals.first
-  end
-
-  # output this week's lunch
-  #
-  def week
-    get_meals.each { |meal|
-      puts meal
-    }
+    puts get_meals
   end
 
   private
