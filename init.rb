@@ -13,7 +13,7 @@ class Heroku::Command::Lunch < Heroku::Command::Base
   private
 
   def get_meals
-    result = RestClient::Resource.new('https://ohiru.herokai.com/meals').get.body
+    result = RestClient::Resource.new('http://lunch.herokuapp.com/').get.body
     json_decode(result)['result']
   end
 
