@@ -10,7 +10,7 @@ $ heroku plugins:install https://github.com/pvh/heroku-lunch.git
 
 ## Usage
 
-```
+```bash
 $ heroku lunch -s
 Monday       Some lunch for the day
 Tuesday      Another lunch
@@ -19,7 +19,7 @@ Thursday     Something bio dynamic
 Friday       ZOMG, crepes
 ```
 
-```
+```bash
 $ heroku lunch
 Monday:      Some lunch for the day
 
