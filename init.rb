@@ -1,4 +1,6 @@
 require "heroku/command/base"
+require "restclient"
+require "date"
 
 class Heroku::Command::Lunch < Heroku::Command::Base
 
@@ -7,14 +9,12 @@ class Heroku::Command::Lunch < Heroku::Command::Base
   # output this weeks's lunches
   #
   def index
-    puts get_meals
-  end
+    meals = json_decode(RestClient::Resource.new('http://lunch.herokuapp.com/').get.body)
 
-  private
-
-  def get_meals
-    result = RestClient::Resource.new('http://lunch.herokuapp.com/').get.body
-    json_decode(result)['result']
+    meals.each do |meal|
+      # puts "#{ Date.parse(meal['date']) }: #{ meal['summary'] }"
+      puts "#{ Date.parse(meal['date']).strftime("%A") }: #{ meal['summary'] }"
+    end
   end
 
 end
