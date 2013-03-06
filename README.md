@@ -11,41 +11,10 @@ $ heroku plugins:install https://github.com/pvh/heroku-lunch.git
 ## Usage
 
 ```bash
-$ heroku lunch -s
-  Monday       Some lunch for the day
-* Tuesday      Another lunch
-  Wednesday    By now we're pretty fat
-  Thursday     Something bio dynamic
-  Friday       ZOMG, crepes
-```
-
-```bash
-$ heroku lunch
-Monday:      Some lunch for the day
-
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-             aliquip ex ea commodo consequat.
-
-Tuesday:     Another lunch
-
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-             aliquip ex ea commodo consequat.
-
-Tuesday:     By now we're pretty fat
-
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-             aliquip ex ea commodo consequat.
-
-Tuesday:     ZOMG, crepes
-
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-             aliquip ex ea commodo consequat.
+$ heroku lunch [--web]
+   Monday     Wise Son's - Whisk
+   Tuesday    Creperie Saint Germain - ZeroCater
+*  Wednesday  SOMA Street Food
+   Thursday   Little Vietnam Pho
+   Friday     Nico's Taco's - ZeroCater
 ```
