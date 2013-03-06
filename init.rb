@@ -8,18 +8,28 @@ class Heroku::Command::Lunch < Heroku::Command::Base
 
   # list this weeks's lunches
   #
-  # -s, --short    # print just meals without descriptions
+  # -w, --web   # open on the web
   #
   def index
-    meals = json_decode(RestClient::Resource.new("http://lunch.herokuapp.com/").get({:accept => :json}).body)
+    base_url = "http://lunch.herokuapp.com/"
 
-    if options[:short]
-      styled_array(meals.map do |meal|
-        [Date.parse(meal['date']).strftime("%A"), meal['summary']]
-      end)
+    meals = json_decode(RestClient::Resource.new(base_url).get({:accept => :json}).body)
+
+    if options[:web]
+      require "launchy"
+
+      Launchy.open(base_url)
     else
-      puts "Nothing to see here yet, rerun command with -s."
+      styled_array(meals.map do |meal|
+        [day_of_week(meal['date']), meal['summary']]
+      end)
     end
+  end
+
+  private
+
+  def day_of_week(date)
+    Date.parse(date).strftime('%A')
   end
 
 end
