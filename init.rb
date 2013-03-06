@@ -13,12 +13,12 @@ class Heroku::Command::Lunch < Heroku::Command::Base
   def index
     meals = json_decode(RestClient::Resource.new("http://lunch.herokuapp.com/").get({:accept => :json}).body)
 
-    meals.each do |meal|
-      if options[:short]
-        puts "#{Date.parse(meal['date']).strftime("%A")}: #{meal['summary']}"
-      else
-        puts "#{Date.parse(meal['date']).strftime("%A")}: #{meal['summary']} #{meal['description']}\n"
-      end
+    if options[:short]
+      styled_array(meals.map do |meal|
+        [Date.parse(meal['date']).strftime("%A"), meal['summary']]
+      end)
+    else
+      puts "Nothing to see here yet, rerun command with -s."
     end
   end
 
