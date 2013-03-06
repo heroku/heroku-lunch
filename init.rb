@@ -21,8 +21,8 @@ class Heroku::Command::Lunch < Heroku::Command::Base
       Launchy.open(base_url)
     else
       styled_array(meals.map do |meal|
-        [day_of_week(meal['date']), meal['summary']]
-      end)
+        [(meal['today'] ? '*' : ''), day_of_week(meal['date']), meal['summary']]
+      end, :sort => false)
     end
   end
 
