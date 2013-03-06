@@ -10,7 +10,7 @@ $ heroku plugins:install https://github.com/pvh/heroku-lunch.git
 
 ## Usage
 
-```bash
+```
 $ heroku lunch [--web]
    Monday     Wise Son's - Whisk
    Tuesday    Creperie Saint Germain - ZeroCater
