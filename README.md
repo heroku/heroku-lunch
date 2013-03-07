@@ -5,7 +5,7 @@ A Heroku CLI plugin for Herokai to figure out lunch powered by [Ohiru](https://g
 ## Installation
 
 ```
-$ heroku plugins:install https://github.com/pvh/heroku-lunch.git
+$ heroku plugins:install https://github.com/max/heroku-lunch.git
 ```
 
 ## Usage
