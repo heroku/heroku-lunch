@@ -1,6 +1,7 @@
 # heroku-lunch
 
-A Heroku CLI plugin for Herokai to figure out lunch powered by [Ohiru](https://github.com/max/ohiru).
+A Heroku CLI plugin to figure out what's for lunch backed by
+[Ohiru](https://github.com/max/ohiru).
 
 ## Installation
 
