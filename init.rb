@@ -5,6 +5,7 @@ require "date"
 # list this weeks's Heroku lunches
 #
 class Heroku::Command::Lunch < Heroku::Command::Base
+
   BASE_URL = "https://lunch.herokai.com/"
 
   include Heroku::Helpers
@@ -14,7 +15,6 @@ class Heroku::Command::Lunch < Heroku::Command::Base
   # list this weeks's lunches
   #
   def index
-
     meals = json_decode(RestClient::Resource.new(BASE_URL).get({:accept => :json}).body)
 
     styled_array(meals.map do |meal|
