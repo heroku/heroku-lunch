@@ -11,7 +11,7 @@ class Heroku::Command::Lunch < Heroku::Command::Base
   # -w, --web   # open on the web
   #
   def index
-    base_url = "http://lunch.herokuapp.com/"
+    base_url = "https://lunch.herokai.com/"
 
     meals = json_decode(RestClient::Resource.new(base_url).get({:accept => :json}).body)
 
