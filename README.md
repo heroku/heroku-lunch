@@ -12,10 +12,13 @@ $ heroku plugins:install https://github.com/max/heroku-lunch.git
 ## Usage
 
 ```
-$ heroku lunch [--web]
+$ heroku lunch
    Monday     Wise Son's - Whisk
    Tuesday    Creperie Saint Germain - ZeroCater
 *  Wednesday  SOMA Street Food
    Thursday   Little Vietnam Pho
    Friday     Nico's Taco's - ZeroCater
+
+# Open lunch menu in browser
+$ heroku lunch:open
 ```
