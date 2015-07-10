@@ -6,7 +6,7 @@ A Heroku CLI plugin to figure out what's for lunch backed by
 ## Installation
 
 ```
-$ heroku plugins:install https://github.com/max/heroku-lunch.git
+$ heroku plugins:install https://github.com/heroku/heroku-lunch.git
 ```
 
 ## Usage
