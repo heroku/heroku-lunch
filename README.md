@@ -1,7 +1,7 @@
 # heroku-lunch
 
 A Heroku CLI plugin to figure out what's for lunch backed by
-[Ohiru](https://github.com/max/ohiru).
+[Ohiru](https://github.com/heroku/lunch).
 
 ## Installation
 
